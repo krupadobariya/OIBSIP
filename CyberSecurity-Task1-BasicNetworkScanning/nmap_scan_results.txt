@@ -1,0 +1,87 @@
+=========================================================
+Task 1 - Basic Network Scanning with Nmap
+=========================================================
+
+Target IP Address:
+10.191.136.163
+
+---------------------------------------------------------
+1. Basic Scan
+---------------------------------------------------------
+
+Command:
+nmap 10.191.136.163
+
+Results:
+- Host is up.
+- 996 TCP ports are closed.
+- 4 TCP ports are open.
+
+Open Ports:
+135/tcp  - msrpc
+139/tcp  - netbios-ssn
+445/tcp  - microsoft-ds
+5357/tcp - wsdapi
+
+Scan Duration:
+5.45 seconds
+
+
+---------------------------------------------------------
+2. Service Version Scan
+---------------------------------------------------------
+
+Command:
+nmap -sV 10.191.136.163
+
+Results:
+135/tcp  open  msrpc        Microsoft Windows RPC
+139/tcp  open  netbios-ssn  Microsoft Windows netbios-ssn
+445/tcp  open  microsoft-ds
+5357/tcp open  http         Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+
+Service Information:
+Operating System: Windows
+
+Scan Duration:
+16.55 seconds
+
+
+---------------------------------------------------------
+3. Operating System Detection
+---------------------------------------------------------
+
+Command:
+nmap -O 10.191.136.163
+
+Results:
+Device Type : General Purpose
+Running OS  : Microsoft Windows 10
+OS Details  : Microsoft Windows 10 (1809–21H2)
+Network Distance : 0 hops
+
+Scan Duration:
+1.97 seconds
+
+
+---------------------------------------------------------
+Findings Summary
+---------------------------------------------------------
+
+Target Status:
+Host is active and reachable.
+
+Total Open Ports:
+4
+
+Open Ports:
+- 135/tcp (MSRPC)
+- 139/tcp (NetBIOS Session Service)
+- 445/tcp (Microsoft Directory Services)
+- 5357/tcp (Web Services on Devices API)
+
+Detected Operating System:
+Microsoft Windows 10
+
+Conclusion:
+The scan successfully identified the target system, detected four open TCP ports, identified running services, and determined the operating system as Microsoft Windows 10. These results can be used for further security analysis and assessment.
