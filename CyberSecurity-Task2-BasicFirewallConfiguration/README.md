@@ -2,16 +2,18 @@
 
 ## Overview
 
-This project demonstrates how to configure a basic firewall using UFW (Uncomplicated Firewall) on Ubuntu Linux. The firewall was enabled, firewall rules were created to allow and deny specific services, and the configuration was verified using Nmap.
+This project demonstrates the basic configuration of a firewall using UFW (Uncomplicated Firewall) on Ubuntu Linux. Firewall rules were configured to allow secure services and block unnecessary network traffic. The configuration was then verified using Nmap.
 
 ---
 
 ## Objective
 
-- Install and enable UFW
-- Configure basic firewall rules
-- Allow SSH and HTTPS traffic
-- Block HTTP and Telnet traffic
+- Install and enable UFW (Uncomplicated Firewall)
+- Configure firewall rules
+- Allow SSH (Port 22)
+- Allow HTTPS (Port 443)
+- Block HTTP (Port 80)
+- Block Telnet (Port 23)
 - Verify firewall configuration using Nmap
 
 ---
@@ -21,33 +23,46 @@ This project demonstrates how to configure a basic firewall using UFW (Uncomplic
 - Ubuntu Linux
 - UFW (Uncomplicated Firewall)
 - Nmap
-- Terminal
+- Linux Terminal
 
 ---
 
-## Repository Contents
+## Repository Structure
 
 ```
 CyberSecurity-Task2-BasicFirewallConfiguration
 │── README.md
 │── firewall_configuration_report.md
-└── screenshots
+└── screenshots/
     ├── 01_ufw_install.png
     ├── 02_ufw_enable.png
     ├── 03_firewall_rules.png
     ├── 04_firewall_status.png
-    ├── 05_script_execution.png
+    ├── 05_script_execution1.png
+    ├── 05_script_execution2.png
     └── 06_nmap_test.png
 ```
+
+---
+
+## Screenshots Included
+
+- UFW installation
+- Firewall enabled
+- Firewall rule configuration
+- Firewall status verification
+- Script execution
+- Nmap verification
 
 ---
 
 ## Learning Outcomes
 
 - Learned how to install and enable UFW.
-- Understood how firewall rules control network traffic.
-- Learned to allow and deny specific ports and services.
-- Verified firewall configuration using Nmap.
+- Understood how firewall rules control incoming network traffic.
+- Configured allow and deny rules for different services.
+- Verified firewall settings using Nmap.
+- Gained practical experience with Linux firewall management.
 
 ---
 
